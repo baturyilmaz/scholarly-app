@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import SearchCard from '../components/SearchCard';
 import { useEffect, useState } from 'react';
 import { getResultList } from '../lib/api/api';
-import { Result, ResultList } from '../types/SearchResponse';
+import { Result } from '../types/SearchResponse';
 
 function SearchResults() {
   const [articles, setArticles] = useState<Result[]>([]);

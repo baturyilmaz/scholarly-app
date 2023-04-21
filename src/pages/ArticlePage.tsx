@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getArticle } from '../lib/api/api';
 import { Result } from '../types/ArticleResponse';
 
