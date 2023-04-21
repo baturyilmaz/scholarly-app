@@ -1,8 +1,11 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppLayout from './layouts/AppLayout';
+
 function App() {
   return (
-    <div className="container mx-auto">
-      <h1 className="text-3xl">Hello World!</h1>
-    </div>
+    <Router>
+      <AppLayout></AppLayout>
+    </Router>
   );
 }
 
