@@ -1,5 +1,6 @@
 import { IconType } from 'react-icons';
 import { Result } from '../types/SearchResponse';
+import { Link } from 'react-router-dom';
 // import { FiTrash } from 'react-icons/fi';
 
 interface ArticleCardProps {
@@ -9,7 +10,7 @@ interface ArticleCardProps {
 
 function ArticleCard({ icon: Icon, article }: ArticleCardProps) {
   return (
-    <>
+    <Link to={`/article/${article.id}`}>
       <div className="w-full bg-gray-900 rounded-lg shadow-md p-6 my-6 mx-auto hover:bg-gray-800 hover:cursor-pointer">
         <div className="flex justify-between items-center">
           <div className="">
@@ -29,12 +30,13 @@ function ArticleCard({ icon: Icon, article }: ArticleCardProps) {
             }`}
           >
             <Icon
+              onClick={(e) => e.preventDefault()}
               className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white hover:text-gray-300 cursor-pointer`}
             />
           </div>
         </div>
       </div>
-    </>
+    </Link>
   );
 }
 
