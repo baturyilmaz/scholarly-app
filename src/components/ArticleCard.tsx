@@ -1,26 +1,26 @@
 import { IconType } from 'react-icons';
+import { Result } from '../types/SearchResponse';
 // import { FiTrash } from 'react-icons/fi';
 
 interface ArticleCardProps {
+  article: Result;
   icon: IconType;
 }
 
-function ArticleCard({ icon: Icon }: ArticleCardProps) {
+function ArticleCard({ icon: Icon, article }: ArticleCardProps) {
   return (
     <>
       <div className="w-full bg-gray-900 rounded-lg shadow-md p-6 my-6 mx-auto hover:bg-gray-800 hover:cursor-pointer">
         <div className="flex justify-between items-center">
           <div className="">
             <h3 className="text-base sm:text-lg md:text-xl lg:text-xl">
-              Title: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Eligendi quis quas autem iusto maiores cumque placeat repellendus
-              nisi vel maxime!
+              Title: {article.title}
             </h3>
             <h4 className="my-5 text-base sm:text-lg md:text-xl lg:text-xl">
-              Journal Name: Lorem ipsum dolor sit amet.
+              Authors: {article.authorString}
             </h4>
             <h4 className="my-5 text-base sm:text-lg md:text-xl lg:text-xl">
-              Publication Year: 2023
+              Publication Year: {article.dateOfCreation}
             </h4>
           </div>
           <div

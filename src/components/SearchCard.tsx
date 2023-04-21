@@ -1,8 +1,13 @@
 import { FiBookmark } from 'react-icons/fi';
 import ArticleCard from './ArticleCard';
+import { Result } from '../types/SearchResponse';
 
-function ListCard() {
-  return <ArticleCard icon={FiBookmark} />;
+interface SearchCardProps {
+  article: Result;
 }
 
-export default ListCard;
+function SearchCard({ article }: SearchCardProps) {
+  return <ArticleCard icon={FiBookmark} article={article} />;
+}
+
+export default SearchCard;
